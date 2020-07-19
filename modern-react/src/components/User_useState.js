@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function User() {
+function User_useState() {
   //1. 요청의 결과물
   const [users, setUsers] = useState(null);
   //2. 로딩 상태 
@@ -41,4 +41,4 @@ function User() {
   );
 }
 
-export default User;
+export default User_useState;
