@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 
 const colorStyles = css`
   ${({ theme, color }) => {
-        const seleceted = theme.palette[color];
-        return css`
+    const seleceted = theme.palette[color];
+    return css`
       background: ${seleceted};
   &:hover{
    background: #339af0;
@@ -14,8 +14,8 @@ const colorStyles = css`
   }
 
     `;
-    }
-    }
+  }
+  }
 `;
 
 const StyledButton = styled.button`
@@ -49,13 +49,13 @@ const StyledButton = styled.button`
 `;
 
 function Button({ children, color, ...rest }) {
-    return (
-        <>
-            <StyledButton color={color} {...rest}>{children}</StyledButton>
-        </>
-    );
+  return (
+    <>
+      <StyledButton color={color} {...rest}>{children}</StyledButton>
+    </>
+  );
 }
 Button.defaultProps = {
-    color: 'blue'
+  color: 'blue'
 }
 export default Button;
