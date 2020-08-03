@@ -10,6 +10,11 @@ function HistorySample({ history }) {
 
   useEffect(() => {
     console.log(history);
+    //페이지 이탈 방지
+    const unblock = history.block('정말 떠나실건가요?');
+    return () => {
+      unblock();
+    }
   }, [history]);
   return (
     <div>
