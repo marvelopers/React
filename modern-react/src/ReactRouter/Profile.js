@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, NavLink } from 'react-router-dom';
+import WithRouterSample from './WithRouterSample';
 
 const profileData = {
   marveloper: {
@@ -23,6 +25,21 @@ function Profile({ match }) {
     <div>
       <h3>{username} ({profile.name})</h3>
       <p>{profile.description}</p>
+
+      <h3>사용자 목록</h3>
+      <ul>
+        <li>
+          <NavLink to="/profiles/marveloper" activeStyle={{ background: 'black', color: 'white' }}>marveloper</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/profiles/velopert">velopert</NavLink>
+        </li>
+      </ul>
+
+      <Route path='/profiles' exact render={() => <div>사용자를 선택해주세요.</div>} />
+      <Route path='/profiles/:username' component={Profile} />
+      <WithRouterSample />
     </div>
   );
 }
