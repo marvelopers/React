@@ -59,6 +59,9 @@ export function TodoList() {
   console.log("...", todos);
   return (
     <>
+      <div>
+        <h2>TODO LIST</h2>
+      </div>
       <StyleUl>
         {todos.map(todo =>
           <li key={todo.id} className="todoList">
@@ -82,7 +85,7 @@ export default TodoList;
 
 const StyleUl = styled.ul`
   list-style-type: none;
-  margin: auto;
+  margin: 0;
 
   div{
     width: 40%;

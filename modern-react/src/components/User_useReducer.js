@@ -58,11 +58,16 @@ function User() {
   if (!users) return null;
 
   return (
-    <ul>
-      {users.map(user => <li key={user.id}>
-        {user.username} ({user.name})
+    <>
+      <div>
+        <h3>userList + useReducer</h3>
+      </div>
+      <ul>
+        {users.map(user => <li key={user.id}>
+          {user.username} ({user.name})
       </li>)}
-    </ul>
+      </ul>
+    </>
   );
 }
 
