@@ -1,5 +1,7 @@
 import React from 'react';
+import styled from 'styled-components'
 import User_useState from './components/User_useState';
+import TodoList from './components/TodoList';
 import User from './components/User_useReducer';
 import Button from './components/Button';
 import Dialog from './components/Dialog';
@@ -26,15 +28,17 @@ function App() {
         )} />
 
       </Switch>
-      <ul>
+
+      <Nav>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/about">ABOUT</Link></li>
         <li><Link to="/profiles">PROFILES</Link></li>
         <li><Link to="/history">HISTORY</Link></li>
-      </ul>
+      </Nav>
 
       <User_useState />
       <User />
+      <TodoList />
       <Button>버튼입니다.</Button>
       {/* <Dialog title={"제목"}>버튼을 클릭했습니다.</Dialog> */}
     </>
@@ -43,3 +47,20 @@ function App() {
 }
 
 export default App;
+
+const Nav = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: auto;
+  padding: 10px;
+
+  background: pink;
+
+  li{
+    font-size : 16px;
+  }
+  li:hover{
+
+  }
+`;
