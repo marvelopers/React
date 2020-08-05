@@ -5,7 +5,7 @@ import WithRouterSample from './WithRouterSample';
 const profileData = {
   marveloper: {
     name: '김서현',
-    description: 'Front-end Engineer '
+    description: 'Front-end Engineer @fitpet'
   },
   velopert: {
     name: '김민준',
