@@ -1,0 +1,4 @@
+legacy
+src/backend/django/sites/fitpet_admin/static
+*fitpetgo*
+webpack.config.js
